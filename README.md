@@ -6,7 +6,9 @@ service provider for booking services including a small web shop to sell physica
 As JavaScript was out of scope on this course, this is more like a proof-of-concept for a web site, 
 concentrating only for the visual appearance, and leaving actual functionalities out.
 
-The below is part of the final report related to the course work. This work was graded 5/5.
+Check it out 👉🏻 https://judetta.github.io/flowers-and-meditation/
+
+The below is part of the final report related to the course work. This work was graded 5/5. 🎉
 
 
 ## Technology
