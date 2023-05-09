@@ -1,0 +1,13 @@
+@use '../abstracts/variables';
+
+body {
+  padding-bottom: calc($footer-height + $footer-margin) !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: calc($footer-height-md + $footer-margin) !important;
+  }
+}

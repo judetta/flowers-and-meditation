@@ -1,0 +1,18 @@
+// Import overriding variables before Bootstrap
+@import './abstracts/variables';
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@import './base/reset';
+
+@import './components/buttons';
+@import './components/inputs';
+
+@import './layout/header';
+@import './layout/footer';
+
+@import './page/index';
+@import './page/book';
+@import './page/breathe';
+@import './page/shop';
+@import './page/cart';

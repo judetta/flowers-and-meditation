@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/10baa87caf.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+  <title>JH | Cart</title>
+</head>
+
+<body>
+  <header class="container sticky-top">
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <div class="container-fluid align-items-start">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./graphics/logo.svg" alt="logo" height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarNav">
+          <div class="offcanvas-header align-items-start justify-content-end">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="./breathe.html">Breathe</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./book.html">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active position-relative" aria-current="page" href="./cart.html">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="badge rounded-pill bg-primary translate-middle">
+                    <small>2</small>
+                    <span class="visually-hidden">items in cart</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+  <main class="container p-4">
+    <h1 class="mb-5">Your shopping cart</h1>
+
+    <div class="row g-5">
+      <form class="col-lg order-lg-first">
+        <div class="mb-3 row form-floating">
+          <input type="text" class="form-control" id="name" placeholder="Firstname Lastname" required>
+          <label for="name">Name</label>
+        </div>
+        <div class="mb-3 row form-floating">
+          <input type="text" class="form-control" id="address" placeholder="Street 6" required>
+          <label for="address">Street address</label>
+        </div>
+        <div class="mb-3 row form-floating">
+          <input type="text" id="zipcode" class="form-control" placeholder="12345">
+          <label for="zipcode">Zip code</label>
+        </div>
+        <div class="mb-3 row form-floating">
+          <input type="text" id="city" class="form-control" placeholder="Los Angeles">
+          <label for="city">City</label>
+        </div>
+        <div class="mb-3 row form-floating">
+          <input type="text" class="form-control" id="phone" placeholder="123-456-789" required>
+          <label for="phone">Phone number</label>
+        </div>
+        <div class="mb-3 row form-floating">
+          <input type="email" class="form-control" id="email" placeholder="name@domain.com" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" value="" id="terms-agree" required>
+          <label class="form-check-label" for="terms-agree">
+            I have read the terms and conditions and agree to everything and will hereby commit my soul to peace and flowers.
+          </label>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button type="reset" class="btn btn-outline-secondary">Clear form</button>
+          <button type="submit" class="btn btn-primary ms-3">
+            Send order<i class="fas fa-paper-plane ms-2"></i>
+          </button>
+        </div>
+      </form>
+  
+      <section class="col-lg order-first">
+        <div class="d-flex align-items-start">
+          <img class="cart-img mt-2" src="./images/flower1.jpg" alt="Lily">
+          <div class="m-2">
+            <strong>Last lily</strong>
+            <p class="mb-1">Metal plate
+              <small class="text-nowrap">Large 75&#215;100 cm</small><br>
+            </p>
+            4990 €
+            <button class="btn btn-outline-danger btn-sm ms-3" title="Remove"><i class="far fa-trash-alt"></i></button>
+          </div>
+        </div>
+        <div class="d-flex align-items-start">
+          <img class="cart-img mt-2" src="./images/flower12.jpg" alt="Orchids">
+          <div class="m-2">
+            <strong>Vivid orchids</strong>
+            <p class="mb-1">Photo canvas
+              <small class="text-nowrap">Medium 42&#215;56 cm</small><br>
+            </p>
+            4990 €
+            <button class="btn btn-outline-danger btn-sm ms-3" title="Remove"><i class="far fa-trash-alt"></i></button>
+          </div>
+        </div>
+        <div class="mt-3 d-flex justify-content-between">
+          <strong>Cart total</strong>
+          <strong class="fs-5">9980 €</strong>
+        </div>
+        <div class="d-flex justify-content-between">
+          <small>Includes VAT 24%</small>
+          <small>1931,61 €</small>
+        </div>
+      </section>
+    </div>
+
+    <h2 class="mt-5">Terms and conditions</h2>
+    <div class="accordion" id="terms">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="delivery-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#delivery"
+            aria-expanded="false" aria-controls="delivery">
+            Delivery
+          </button>
+        </h3>
+        <div id="delivery" class="accordion-collapse collapse" aria-labelledby="delivery-header"
+          data-bs-parent="#terms">
+          <div class="accordion-body">
+            We deliver to any reasonably accessible place on Earth!
+            All items are made to order, so please expect around a week before your order is being sent.
+            In the meanwhile, delivery times will be checked and confirmed to you. Generally within Europe
+            the delivery times are around 1-3 working days. We use dragons for worldwide deliveries.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="returns-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returns"
+            aria-expanded="false" aria-controls="returns">
+            Returns
+          </button>
+        </h3>
+        <div id="returns" class="accordion-collapse collapse" aria-labelledby="returns-header" data-bs-parent="#terms">
+          <div class="accordion-body">
+            As all items are made to order, we do not accept returns. Please do not make orders
+            if you are not committed to cherishing the items. Mother nature does not like throwaway culture!
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="additional-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#additional-terms" aria-expanded="false" aria-controls="additional-terms">
+            Additional terms
+          </button>
+        </h3>
+        <div id="additional-terms" class="accordion-collapse collapse" aria-labelledby="additional-header"
+          data-bs-parent="#terms">
+          <div class="accordion-body">
+            Actually, this is not an actual web store.
+            Only when the sun rises in the west and sets in the east.
+            When the seas go dry and mountains blow in the wind like leaves.
+            When your browser quickens again, and you bear a living CSS-animation.
+            Then you will get your order, my sun-and-stars, and not before.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-wave"></div>
+    <div class="footer-wave"></div>
+    <div class="footer-wave"></div>
+    <div class="footer-content">
+      <div class="logo">
+        <img src="./graphics/logo.svg" height="100px" alt="">
+        <p>Flowers and meditation</p>
+      </div>
+      <form>
+        <label for="newsletter" class="form-label">Updates to you email?</label>
+        <div class="input-group">
+          <input type="email" id="newsletter" class="form-control-sm" placeholder="Enter you email here">
+          <button class="btn btn-primary no-shadow" type="button">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

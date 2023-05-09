@@ -1,0 +1,19 @@
+@use '../abstracts/variables';
+
+.btn-primary {
+  background-color: $primary;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  border: $btn-primary-border;
+  box-shadow: $btn-shadow;
+
+  &:active {
+    border: 2px inset $primary;
+    box-shadow: none;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+}

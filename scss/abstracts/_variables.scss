@@ -1,0 +1,16 @@
+// Override Bootstrap default colors
+$primary: #532559;
+$secondary: #1D5949;
+
+// Own variables
+$btn-shadow: 0 0 5px var(--bs-gray-900);
+$btn-primary-border: 2px outset $primary;
+
+$footer-height: 20rem; /* total height of footer */
+$footer-content-height: calc($footer-height - 3rem);
+$footer-height-md: calc($footer-height - 5rem);
+$footer-content-height-md: calc($footer-height-md - 3rem);
+$footer-margin: 3rem; /* footer top margin */
+
+// filter to change svg color from $primary to $secondary with the help of https://codepen.io/sosuke/pen/Pjoqqp
+$primary-to-secondary-filter: brightness(0) saturate(100%) invert(28%) sepia(43%) saturate(544%) hue-rotate(113deg) brightness(94%) contrast(96%);

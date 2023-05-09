@@ -1,0 +1,6 @@
+@use '../abstracts/variables';
+
+.form-control:focus, .form-control-sm:focus, .form-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px $secondary;
+}

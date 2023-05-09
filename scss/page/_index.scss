@@ -1,0 +1,107 @@
+@use '../abstracts/variables';
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+.intro {
+  height: 90vh;
+  position: relative;
+  margin-bottom: 6rem;
+
+  @keyframes slide {
+    50% {
+      transform: translateX(70%);
+    }
+    100% {
+      transform: translateX(0%);
+      filter: opacity(1);
+    }
+  }
+  
+  .animated-logo {
+    height: 40vh;
+    transform: translateX(-150%);
+    filter: opacity(0);
+    animation: 6s ease-out forwards slide;
+  }
+  
+  @keyframes reveal {
+    100% {
+      opacity: 1;
+      filter: opacity(1);
+    }
+  }
+  
+  .tagline {
+    opacity: 0;
+    animation: 1s linear 5.7s forwards reveal;
+    text-align: center;
+  }
+  
+  .mission {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 21px;
+    text-align: center;
+    opacity: 0;
+    animation: 2s ease-in 6.5s forwards reveal;
+  }
+  
+  .logo-container {
+    justify-content: center;
+  }
+
+  .text-container {
+    align-items: center;
+  }
+}
+
+@keyframes color-filter {
+  0% {
+    filter: none;
+  }
+  50% {
+    filter: $primary-to-secondary-filter;
+  }
+  100% {
+    filter: none;
+  }
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  filter: opacity(0);
+  animation: 1.5s linear 7.5s forwards reveal, 40s linear 10s infinite color-filter;
+}
+
+@media (min-width: 992px) {
+  .intro {
+    .logo-container {
+      justify-content: end;
+    }
+  
+    .text-container {
+      align-items: flex-start;
+      justify-content: center;
+    }
+  
+    .tagline {
+      margin-top: 3rem;
+      text-align: left;
+    }
+  
+    .mission {
+      text-align: left;
+      max-width: 550px;
+    }
+
+    .scroll-hint {
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #flower-carousel2, #flower-carousel3 {
+    display: none;
+  }
+}

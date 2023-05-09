@@ -1,0 +1,54 @@
+@use '../abstracts/variables';
+
+.breathe-container {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 992px) {
+  .breathe-container {
+    flex-direction: row;
+  }
+}
+
+@keyframes breathe-text {
+  50% {
+    color: #0000;
+  }
+  90% {
+    color: #0000;
+  }
+}
+
+.breathe {
+  font-size: xx-large;
+  
+  &-in {
+    color: $secondary;
+    animation: 12s linear infinite breathe-text;
+  }
+
+  &-out {
+    color: $primary;
+    animation: 12s linear -6s infinite breathe-text;
+  }
+}
+
+@keyframes breathe-flower {
+  50% {
+    height: 300px;
+
+    filter: $primary-to-secondary-filter;
+  }
+  90% {
+    height: 200px
+  }
+}
+
+.animated-flower {
+  height: 200px;
+  animation: 12s ease-in-out infinite breathe-flower;
+}
