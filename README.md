@@ -1,7 +1,7 @@
-**TTC8410 - Web Visualization - Final Assignment - Autumn 2022**
+# Flower and meditation - web site
 
 As the final assignment for the Web Vizualisation course in Jamk University of Applied Sciences 
-I implemented a web site for an imaginary 
+in autumn 2022 I implemented a web site for an imaginary 
 service provider for booking services including a small web shop to sell physical items. 
 As JavaScript was out of scope on this course, this is more like a proof-of-concept for a web site, 
 concentrating only for the visual appearance, and leaving actual functionalities out.
