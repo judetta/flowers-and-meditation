@@ -1,4 +1,4 @@
-# Flower and meditation - web site
+# Flowers and meditation - web site
 
 As the final assignment for the Web Vizualisation course in Jamk University of Applied Sciences 
 in autumn 2022 I implemented a web site for an imaginary 
